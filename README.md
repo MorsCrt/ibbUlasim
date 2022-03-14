@@ -60,3 +60,14 @@ table_create = """
 
 cursor.execute(table_create)
 ```
+Tablo isimlerini kontrol edelim:
+```python
+cursor.execute("Select * FROM ulasim LIMIT 0")
+colnames = [desc[0] for desc in cursor.description]
+print(colnames)
+```
+```python
+['id', 'DATE_TIME', 'TIME', 'TRANSPORT_TYPE_ID', 'TRANSPORT_TYPE_DESC', 'LINE', 'TRANSFER_TYPE_ID', 'TRANSFER_TYPE', 'NUMBER_OF_PASSENGER', 'NUMBER_OF_PASSAGE']
+
+
+```
