@@ -109,6 +109,6 @@ CSV dosyasını veritabanına aktarırken dikkat etmemiz gereken bazı hususlar 
 
 `\copy ulasim("DATE_TIME","TRANSPORT_TYPE_ID","TRANSPORT_TYPE_DESC","LINE","TRANSFER_TYPE_ID","TRANSFER_TYPE", "NUMBER_OF_PASSENGER","NUMBER_OF_PASSAGE") FROM 'C:\\Users\\acs\\Desktop\\ibb\\test.csv' DELIMITER ',' CSV ENCODING 'UTF8' HEADER;`
 
-COPY işlevi kullanırken eğer mevcut verilerimiz ASCII formatına uygun olmayan karakterler barındırıyorsa ENCODING parametresi ile uygun encoding türünü belirleyebiliriz.
+COPY işlevini kullanırken eğer mevcut verilerimiz ASCII formatına uygun olmayan karakterler barındırıyorsa ENCODING parametresi ile uygun encoding türünü belirleyebiliriz.
 
 Hangi sütunlardaki verilerin veritabanına geçeceğine tablo ismi("SütunAdı") şeklinde karar verebiliriz. Eğer büyük harfle veya boşluğa sahip sütun isimlerine sahipsek çift tırnak kullanımı olmadan yazmak sorunlar çıkarabilir. Bunun dışında CSV dosyasının yolu belirtilirken sağa yatık slash veya sola yatık çift slash kullanılmadığında hata dönebilmekte. 
