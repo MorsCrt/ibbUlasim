@@ -1,6 +1,7 @@
 # İBB Ulaşım Verilerinin İncelenmesi
 
 Proje içinde:
+- Xubuntu
 - CKAN API
 - PostgreSQL
 - psql, DBbeaver
