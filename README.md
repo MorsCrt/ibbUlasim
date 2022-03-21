@@ -2,14 +2,15 @@
 
 Proje içinde:
 - CKAN API
-- PostgreSQL, psql
+- PostgreSQL
+- psql, DBbeaver
 - Apache Superset
 - CSV
 - Pandas, psycopg2
 
 kullanılacaktır. Bu projede amacım bu zamana kadar kendimi geliştirdiğim bazı konularda uygulama yapmaktır. Proje içeriği zamanla güncellenecektir.
 
-[![CKAN](https://i.ibb.co/L9vmRZ9/f0a9090f9c0f3135354ceca1e202e945.png "CKAN")](https://i.ibb.co/L9vmRZ9/f0a9090f9c0f3135354ceca1e202e945.png "CKAN")					[![PostgreSQL](https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png "PostgreSQL")](https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png "PostgreSQL")                 [![Superset](https://i.ibb.co/QHzRP7Q/superset-icon-e1612039883795-25.png "Superset")](https://i.ibb.co/QHzRP7Q/superset-icon-e1612039883795-25.png "Superset")
+[![CKAN](https://i.ibb.co/L9vmRZ9/f0a9090f9c0f3135354ceca1e202e945.png "CKAN")](https://i.ibb.co/L9vmRZ9/f0a9090f9c0f3135354ceca1e202e945.png "CKAN") [![PostgreSQL](https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png "PostgreSQL")](https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png "PostgreSQL") [![Superset](https://i.ibb.co/QHzRP7Q/superset-icon-e1612039883795-25.png "Superset")](https://i.ibb.co/QHzRP7Q/superset-icon-e1612039883795-25.png "Superset") [![dbeaver](https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/ssrytpiyexobjhlo77ew "dbeaver")](https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/ssrytpiyexobjhlo77ew "dbeaver")
 
 ## Veritabanı Oluşturma:
 ```python
@@ -107,6 +108,9 @@ CSV dosyasını veritabanına aktarırken dikkat etmemiz gereken bazı hususlar 
 
 `\copy ulasim("DATE_TIME","TRANSPORT_TYPE_ID","TRANSPORT_TYPE_DESC","LINE","TRANSFER_TYPE_ID","TRANSFER_TYPE", "NUMBER_OF_PASSENGER","NUMBER_OF_PASSAGE") FROM 'C:\\Users\\acs\\Desktop\\ibb\\test.csv' DELIMITER ',' CSV ENCODING 'UTF8' HEADER;`
 
-COPY işlevini kullanırken eğer mevcut verilerimiz ASCII formatına uygun olmayan karakterler barındırıyorsa ENCODING parametresi ile uygun encoding türünü belirleyebiliriz.
+COPY işlevini kullanırken eğer mevcut verilerimiz ASCII formatına uygun olmayan karakterler barındırıyorsa ENCODING parametresi ile uygun encoding türünü belirleyebiliriz. Bizim veri setimizde böyle bir durum mevcuttu:
+
+[![csv](https://i.ibb.co/DVZXgpg/csv.png "csv")](https://i.ibb.co/DVZXgpg/csv.png "csv")
 
 Hangi sütunlardaki verilerin veritabanına geçeceğine tablo ismi("SütunAdı") şeklinde karar verebiliriz. Eğer büyük harfle veya boşluğa sahip sütun isimlerine sahipsek çift tırnak kullanımı olmadan yazmak sorunlar çıkarabilir. Bunun dışında CSV dosyasının yolu belirtilirken sağa yatık slash veya sola yatık çift slash kullanılmadığında hata dönebilmekte. 
+
