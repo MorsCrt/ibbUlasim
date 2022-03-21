@@ -1,7 +1,6 @@
 # İBB Ulaşım Verilerinin İncelenmesi
 
 Proje içinde:
-- Xubuntu
 - CKAN API
 - PostgreSQL
 - psql, DBbeaver
@@ -32,11 +31,15 @@ except:
 #Creating a cursor object using the cursor() method
 cursor = conn.cursor()
 
-cursor.execute('CREATE DATABASE ibb_ulasim')
+sql_crt_db = """
+CREATE DATABASE ibb_ulasim ENCODING='UTF-8' LC_COLLATE='tr_TR.UTF-8' LC_CTYPE = 'tr_TR.UTF-8' TEMPLATE=template0;
+"""
+cursor.execute(sql_crt_db)
+
 ```
 Çektiğimiz verileri bir veritabanına yazıp daha sonra Apache Superset ile inceleyeceğiz.
 
-Veritabanı oluşturma işlemi psycopg2 yerine psql, pgAdmin, DBeaver araçları ile de yapılabilir.
+Veritabanı oluşturma işlemi psycopg2 yerine psql, pgAdmin gibi araçlar ile de yapılabilir.
 
 Connection işlemini veritabanını oluşturduktan sonra ibb_ulasim'a bağlanacak şekilde güncelliyoruz.
 
@@ -47,7 +50,7 @@ Connection işlemini veritabanını oluşturduktan sonra ibb_ulasim'a bağlanaca
 table_create = """
     CREATE TABLE ulasim(
     id SERIAL PRIMARY KEY,
-    "DATE_TIME" DATE,
+    "DATE_TIME" timestamp without time zone,
     "TIME" TIME,
     "TRANSPORT_TYPE_ID" SMALLINT,
     "TRANSPORT_TYPE_DESC" VARCHAR(8),
@@ -57,20 +60,21 @@ table_create = """
     "NUMBER_OF_PASSENGER" INTEGER,
     "NUMBER_OF_PASSAGE" INTEGER)
     """
-
 cursor.execute(table_create)
 ```
-
+Sütunları kontrol ediyoruz:
 ```python
 cursor.execute("Select * FROM ulasim LIMIT 0")
 # Checking the column names
 colnames = [desc[0] for desc in cursor.description]
 print(colnames)
+
 ```
-```python
-['id', 'DATE_TIME', 'TIME', 'TRANSPORT_TYPE_ID', 'TRANSPORT_TYPE_DESC', 'LINE', 'TRANSFER_TYPE_ID', 'TRANSFER_TYPE', 'NUMBER_OF_PASSENGER', 'NUMBER_OF_PASSAGE']
-```
+`['id', 'DATE_TIME', 'TIME', 'TRANSPORT_TYPE_ID', 'TRANSPORT_TYPE_DESC', 'LINE', 'TRANSFER_TYPE_ID', 'TRANSFER_TYPE', 'NUMBER_OF_PASSENGER', 'NUMBER_OF_PASSAGE']`
+
+
 ##### Çektiğimiz verilerde ID sütunu kullanılmayacaktır, ID'yı SERIAL olarak Postgre kendisi atayacaktır. 
+
 --------------------------------------
 ## CKAN, CKAN API
 CKAN Open Knowledge Foundation tarafından geliştirilen verilerin paylaşımını, kullanımını ve bulunmasını kolaylaştıran open source veri yönetim sistemidir. Çeşitli hükümetler ve şirketlere ait 15 milyondan fazla veri seti bulundurmaktadır. CKAN alt yapısı ile birlikte, verileri pek çok formatta paylaşıp aynı zamanda web sitesi üzerinden recline_graph_view, recline_map_view gibi eklentiler ile verilerin interaktif görselleştirmesini yapabiliriz.
