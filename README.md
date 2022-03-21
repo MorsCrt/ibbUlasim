@@ -114,3 +114,9 @@ COPY işlevini kullanırken eğer mevcut verilerimiz ASCII formatına uygun olma
 
 Hangi sütunlardaki verilerin veritabanına geçeceğine tablo ismi("SütunAdı") şeklinde karar verebiliriz. Eğer büyük harfle veya boşluğa sahip sütun isimlerine sahipsek çift tırnak kullanımı olmadan yazmak sorunlar çıkarabilir. Bunun dışında CSV dosyasının yolu belirtilirken sağa yatık slash veya sola yatık çift slash kullanılmadığında hata dönebilmekte. 
 
+------------------
+## Veri Kontrolü ve TIME Verilerinin Oluşturulması
+`SELECT * FROM ulasim LIMIT 5` ile ilk 5 verinin kontrolü:
+[![5](https://i.ibb.co/0Z0nXT3/l-m-5.png "5")](https://i.ibb.co/0Z0nXT3/l-m-5.png "5")
+
+IS NULL operatörü ve COUNT fonksiyonu yardımıyla tabloda kaç tane eksik veri olduğunu öğrenebiliriz.
