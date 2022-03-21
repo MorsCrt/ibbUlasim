@@ -9,9 +9,7 @@ Proje içinde:
 
 kullanılacaktır. Bu projede amacım bu zamana kadar kendimi geliştirdiğim bazı konularda uygulama yapmaktır. Proje içeriği zamanla güncellenecektir.
 
-[![CKAN](https://i.ibb.co/L9vmRZ9/f0a9090f9c0f3135354ceca1e202e945.png "CKAN")](https://i.ibb.co/L9vmRZ9/f0a9090f9c0f3135354ceca1e202e945.png "CKAN")					[![PostgreSQL](https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png "PostgreSQL")](https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png "PostgreSQL")
-
-[![Superset](https://i.ibb.co/QHzRP7Q/superset-icon-e1612039883795-25.png "Superset")](https://i.ibb.co/QHzRP7Q/superset-icon-e1612039883795-25.png "Superset")
+[![CKAN](https://i.ibb.co/L9vmRZ9/f0a9090f9c0f3135354ceca1e202e945.png "CKAN")](https://i.ibb.co/L9vmRZ9/f0a9090f9c0f3135354ceca1e202e945.png "CKAN")					[![PostgreSQL](https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png "PostgreSQL")](https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png "PostgreSQL")                 [![Superset](https://i.ibb.co/QHzRP7Q/superset-icon-e1612039883795-25.png "Superset")](https://i.ibb.co/QHzRP7Q/superset-icon-e1612039883795-25.png "Superset")
 
 ## Veritabanı Oluşturma:
 ```python
