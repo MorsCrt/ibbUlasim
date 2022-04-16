@@ -10,6 +10,8 @@ Proje içinde:
 
 kullanılacaktır. Bu projede amacım bu zamana kadar kendimi geliştirdiğim bazı konularda uygulama yapmaktır. Proje içeriği zamanla güncellenecektir.
 
+Veriler ilk başta lokalde işlenecek olup daha sonra AWS üzerine aktarılıp, otomatize edilecektir.
+
 [![CKAN](https://i.ibb.co/L9vmRZ9/f0a9090f9c0f3135354ceca1e202e945.png "CKAN")](https://i.ibb.co/L9vmRZ9/f0a9090f9c0f3135354ceca1e202e945.png "CKAN") [![PostgreSQL](https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png "PostgreSQL")](https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png "PostgreSQL") [![Superset](https://i.ibb.co/QHzRP7Q/superset-icon-e1612039883795-25.png "Superset")](https://i.ibb.co/QHzRP7Q/superset-icon-e1612039883795-25.png "Superset") [![dbeaver](https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/ssrytpiyexobjhlo77ew "dbeaver")](https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/ssrytpiyexobjhlo77ew "dbeaver")
 
 ## Veritabanı Oluşturma:
@@ -82,6 +84,8 @@ CKAN Open Knowledge Foundation tarafından geliştirilen verilerin paylaşımın
 CKAN API ile verileri JSON, XML, CSV, TSV formatında çekebiliriz. Ayrıca 'datastore_search_sql' ile SQL sorgularını kullanarak veri talebi yapmamıza olanak vermektedir.
 
 Projede DataStore eklentisini kullanarak çeşitli veri setleri çekilecektir. CSV dosyaları için `?bom=true` , JSON için `?format=json` parametreleri kullanılabilir.
+
+Güncelleme: Dump linklerinin çekilmesini otomatize hale getirmek için bir scrapper yazılmıştır.
 
 ```python
 import pandas as pd
