@@ -17,12 +17,13 @@ def get_csv_links(datasets_links) -> list:
     for div in data:
         for childdiv in div.findAll('a')[1:]:
             datasets_links.append(childdiv["href"])
+            
 
     CheckList.check_empty()
     # equal = CheckList.check_equal(datasets_links,file_paths.links_file)
     # diff = CheckList.check_diff(datasets_links,file_paths.links_file)
     
-    print(datasets_links)
+    # print(datasets_links)
     # if equal: print(equal)
     # print(diff)
     # pandasop.PandasOperations(datasets_links)

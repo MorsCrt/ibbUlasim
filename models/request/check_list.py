@@ -20,4 +20,5 @@ class CheckList:
                 links_file:list) -> list:
         diff = list(set(datasets_links) - set(links_file)) + \
                         list(set(links_file) - set(datasets_links)) 
+                        
         return diff

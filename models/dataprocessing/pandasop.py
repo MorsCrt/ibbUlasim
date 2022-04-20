@@ -8,3 +8,4 @@ def PandasOperations(datasets_links):
     df.drop(['TRANSPORT_TYPE_ID', 'TRANSFER_TYPE_ID'], axis=1,inplace=True)
 
     print(df.head(2))
+
