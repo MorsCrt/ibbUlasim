@@ -5,7 +5,6 @@ path_root = Path(__file__).parents[2]
 sys.path.append(str(path_root))
 from bs4 import BeautifulSoup
 
-# from models.request.check_list import CheckList
 
 def get_csv_links() -> list:
     datasets_links = []
@@ -22,11 +21,3 @@ def get_csv_links() -> list:
     
     datasets_links.append("https://data.ibb.gov.tr/dataset/015e8185-d59c-47c1-a4cf-8d7fc709ef44/resource/12f5bc23-224a-43cb-b60d-3f36f83ffd33/download/ibb_wifi_subscriber.csv")     
     return datasets_links
-            
-    # pandasop.PandasOperations(datasets_links)
-        
-# CheckList.check_empty()
-# equal = CheckList.check_equal(datasets_links,file_paths.link_formatted)
-# diff = CheckList.check_diff(datasets_links,file_paths.link_formatted)
-# print(diff)
-
