@@ -19,7 +19,8 @@ def get_csv_links() -> list:
     for div in data:
         for childdiv in div.findAll('a')[1:]:
             datasets_links.append(childdiv["href"])
-            
+    
+    datasets_links.append("https://data.ibb.gov.tr/dataset/015e8185-d59c-47c1-a4cf-8d7fc709ef44/resource/12f5bc23-224a-43cb-b60d-3f36f83ffd33/download/ibb_wifi_subscriber.csv")     
     return datasets_links
             
     # pandasop.PandasOperations(datasets_links)

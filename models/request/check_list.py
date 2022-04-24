@@ -1,5 +1,4 @@
 import file_paths
-# import models.request.scraper as scraper
 
 def check_diff():
     diff = list(set(file_paths.ibb_csv_links) - set(file_paths.link_formatted)) + \
@@ -13,11 +12,3 @@ def check_empty():
                 w.write(x+"\n")
             w.close()
         return True
-    
-    
-# def check_equal(datasets_links:list, 
-#             links_file:list) -> bool:
-#     if len(links_file) == len(datasets_links):
-#         return True
-#     return False
-            
