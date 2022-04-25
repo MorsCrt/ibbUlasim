@@ -1,7 +1,7 @@
-import check_list
+import models.request.check_list as check_list
 from models.dataprocessing.pandasop import PandasOperations
 
-
+test = 0
 def control_list():
     if check_list.check_empty():
         print("Links File Empty! First Run")
@@ -13,5 +13,3 @@ def control_list():
     else:
         print("Database Update")
         
-
-control_list()

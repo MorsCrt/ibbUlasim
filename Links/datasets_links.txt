@@ -14,4 +14,3 @@ https://data.ibb.gov.tr/dataset/a6855ce7-4092-40a5-82b5-34cf3c7e36e3/resource/00
 https://data.ibb.gov.tr/dataset/a6855ce7-4092-40a5-82b5-34cf3c7e36e3/resource/a22578e4-3c72-454b-a9e4-d843b7e649e8/download/hourly_transportation_202102.csv
 https://data.ibb.gov.tr/dataset/a6855ce7-4092-40a5-82b5-34cf3c7e36e3/resource/ef77dde9-9e0c-4417-a939-3ca4013ef919/download/hourly_transportation_202103.csv
 https://data.ibb.gov.tr/dataset/a6855ce7-4092-40a5-82b5-34cf3c7e36e3/resource/7a86010b-2c38-4639-a13d-87155649b234/download/hourly_transportation_202104.csv
-https://data.ibb.gov.tr/dataset/a6855ce7-4092-40a5-82b5-34cf3c7e36e3/resource/42b4a830-fee6-4765-9daf-3f3884f09b4b/download/hourly_transportation_202105.csv

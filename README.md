@@ -1,11 +1,11 @@
 # İBB Ulaşım Verilerinin İncelenmesi
 
 Proje içinde:
-- CKAN API
-- PostgreSQL
-- psql, DBbeaver
-- Apache Superset
-- CSV
+- Bs4
+- PostgreSQL, AWS RDS
+- AWS CodeBuild
+- AWS lambda
+- AWS CloudWatch
 - Pandas, psycopg2
 
 kullanılacaktır. Bu projede amacım bu zamana kadar kendimi geliştirdiğim bazı konularda uygulama yapmaktır. Proje içeriği zamanla güncellenecektir.

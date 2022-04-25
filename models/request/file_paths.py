@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-import scraper
+import models.request.scraper as scraper
 
 path = Path(os.path.dirname(os.path.abspath(__file__)))
 ibb_func_path = str(path.parent.parent.absolute())
