@@ -1,5 +1,4 @@
 import models.request.controller as ctrl
 
 
-def main():
-    ctrl.control_list()
+ctrl.control_list()
