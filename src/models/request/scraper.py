@@ -1,10 +1,6 @@
 import requests
-import sys
 from pathlib import Path
-path_root = Path(__file__).parents[2]
-sys.path.append(str(path_root))
 from bs4 import BeautifulSoup
-
 
 def get_csv_links() -> list:
     datasets_links = []

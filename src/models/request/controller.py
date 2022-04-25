@@ -1,5 +1,5 @@
-import models.request.check_list as check_list
-from models.dataprocessing.pandasop import PandasOperations
+import src.models.request.check_list as check_list
+from src.models.dataprocessing.pandasop import PandasOperations
 
 def control_list():
     if check_list.check_empty():

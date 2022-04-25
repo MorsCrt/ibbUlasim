@@ -1,4 +1,4 @@
-import models.request.file_paths as file_paths
+import src.models.request.file_paths as file_paths
 
 def check_diff():
     diff = list(set(file_paths.ibb_csv_links) - set(file_paths.link_formatted)) + \
