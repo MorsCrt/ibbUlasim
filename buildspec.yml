@@ -13,7 +13,7 @@ phases:
       - zip -r9 ../deployment_package.zip .
       - cd ..
       - cd src
-      - zip -r9 ../src.zip
+      - zip -r9 ../src.zip .
       - cd ..
       - zip -g deployment_package.zip src.zip lambda_function.py
     commands:
