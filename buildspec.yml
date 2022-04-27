@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo "Zipping deployment package..."
-      - zip -ur deployment_package.zip lib src lambda_function.py
+      - zip -ur deployment_package.zip lib/* src/* lambda_function.py
     commands:
       - echo "Updating lambda Function..."
       - aws lambda update-function-code --function-name ibb_func_test --zip-file fileb://deployment_package.zip
